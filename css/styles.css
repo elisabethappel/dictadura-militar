@@ -1,0 +1,17 @@
+html, body, #sidebar, #map, .fullContainer {
+  height: 100%;
+  margin: 0;
+
+}
+
+.fullContainer {
+  display: flex;
+}
+
+#sidebar {
+  width: 200px;
+}
+
+#map {
+  flex-grow:1;
+}
