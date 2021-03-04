@@ -51,6 +51,26 @@ map.on('style.load', function () {
       }
     });
 
+    map.addSource('highlight-feature', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: []
+          }
+        })
+
+        map.addLayer({
+          id: 'highlight-line',
+          type: 'circle',
+          source: 'highlight-feature',
+          paint: {
+            'circle-stroke-color':'black',
+            'circle-color':'white',
+            'circle-stroke-width':2,
+            'circle-radius':13
+          }
+    });
+
 })
 
 map.on('click', 'comisarias', function (e) {
@@ -97,6 +117,9 @@ map.on('click', 'dependencias', function (e) {
 
 
       popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
+
+      // hover highlight
+      map.getSource('highlight-feature').setData(hoveredFeature.geometry);
 
       // show the cursor as a pointer
       map.getCanvas().style.cursor = 'pointer';
