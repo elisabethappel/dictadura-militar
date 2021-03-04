@@ -9,7 +9,7 @@ var map = new mapboxgl.Map({
 
 var nav = new mapboxgl.NavigationControl();
 
-map.addControl(nav, 'top-left');
+map.addControl(nav, 'top-right');
 
 //loading data
 map.on('style.load', function () {
@@ -26,7 +26,9 @@ map.on('style.load', function () {
         'layout': {},
         'paint': {
           'circle-color':
-          '#fbb03b'
+          '#fbb03b',
+          'circle-opacity':0.7,
+          'circle-radius': 13
         }
       });
 
@@ -44,20 +46,30 @@ map.on('style.load', function () {
       'paint': {
         'circle-color':
         '#e55e5e',
-        'circle-opacity':0.6,
-        'circle-radius': {
-            'base': 1.75,
-            'stops': [
-              [14, 15],
-              [14.01, 2],
-              [16, 4],
-              [22, 20]
-]
-}
+        'circle-opacity':0.7,
+        'circle-radius': 13
       }
     });
 
 })
+
+map.on('click', 'comisarias', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+
+      map.flyTo({
+        center: coordinates,
+        zoom: 11
+      });
+    });
+
+map.on('click', 'dependencias', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+
+      map.flyTo({
+        center: coordinates,
+        zoom: 11
+      });
+    });
 
     // creating a popup
     var popup = new mapboxgl.Popup({
@@ -74,8 +86,13 @@ map.on('style.load', function () {
 
     if (features.length > 0) {
 
+      var hoveredFeature = features[0]
+      var name = hoveredFeature.properties.Name
+      var description = hoveredFeature.properties.description
 
-      popup.setLngLat(e.lngLat).setHTML('testing').addTo(map);
+
+
+      popup.setLngLat(e.lngLat).setHTML(name).addTo(map);
 
       // show the cursor as a pointer
       map.getCanvas().style.cursor = 'pointer';
