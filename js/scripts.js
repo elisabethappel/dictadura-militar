@@ -78,7 +78,6 @@ map.on('click', 'dependencias', function (e) {
     });
 
     map.on('mousemove', function (e) {
-      console.log(e)
     // identifying features
     var features = map.queryRenderedFeatures(e.point, {
         layers: ['dependencias','comisarias'],
