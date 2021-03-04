@@ -41,3 +41,7 @@ height: 10px;
 margin-right: 5px;
 width: 10px;
 }
+
+.mapboxgl-popup-content {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

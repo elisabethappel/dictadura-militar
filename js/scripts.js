@@ -89,9 +89,14 @@ map.on('click', 'dependencias', function (e) {
       var name = hoveredFeature.properties.Name
       var description = hoveredFeature.properties.description
 
+      var html = `
+      <div>
+      <b>${name}</b>
+      </div>`
 
 
-      popup.setLngLat(e.lngLat).setHTML(name).addTo(map);
+
+      popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
 
       // show the cursor as a pointer
       map.getCanvas().style.cursor = 'pointer';
