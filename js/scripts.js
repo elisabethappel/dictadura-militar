@@ -16,7 +16,7 @@ map.on('style.load', function () {
   // adding geojson source data, downloaded from external site
   map.addSource('sites', {
     type: 'geojson',
-    data: '/data/otras_dependencias.geojson'
+    data: 'data/otras_dependencias.geojson'
   });
   // styling first data with layer
       map.addLayer({
@@ -34,7 +34,7 @@ map.on('style.load', function () {
 
   map.addSource('policia', {
     type: 'geojson',
-    data: '/data/dependencias_de_la_policia.geojson'
+    data: 'data/dependencias_de_la_policia.geojson'
   });
 // styling second data with layer
     map.addLayer({
