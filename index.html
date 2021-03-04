@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Mapping los Desaparecidos </title>
+  <title> Mapping sites </title>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,14 +13,16 @@
 
   <div class='fullContainer'>
     <div id='sidebar'>
-    <h2>Sites of disappearance of Argentina's military junta</h2>
+    <h2>Sites of disappearance during Argentina's military dictatorship (1976 - 1983)</h2>
    <p> <br>
-     The term <i> desaparecidos </i>(“disappeared”) has been used in Argentina and other Latin American countries in reference to the thousands of civilians and guerrillas taken by the state military systems, never to be seen again. Many <i> desaparecidos </i> were journalists, artists, and students, some of who belonged to formal opposition of the military junta. At the time of disappearance, family members and friends wouldn’t know where the individual was taken from or by who they were taken, let alone where they were taken to. <br><br> To this day, the recovery of information regarding the fate of <i> desaparecidos </i> and children born in captivity is still a process being undertaken by both governmental and non-governmental groups, within and outside of Argentina. While there are an estimated 20,000-30,000 people to have disappeared, only around 8,000 have been documented. <br><br> In addition to the identification of individual remains, sites of disappearance - 726 clandestine centers of detention (CCDs) - have also been identified. This map explores the locations of these facilities, many of which were primarily police stations.
-</p></div>
+     The term <i> desaparecidos </i>(“disappeared”) has been used in Argentina and other Latin American countries in reference to the thousands of civilians and guerrillas taken by the state military systems, never to be seen again. Many <i> desaparecidos </i> were journalists, artists, and students, some of who belonged to formal opposition of the military junta. At the time of disappearance, family members and friends wouldn’t know where the individual was taken from or by who they were taken, let alone where they were taken to. <br><br> To this day, the recovery of information regarding the fate of <i> desaparecidos </i> and children born in captivity is still a process being undertaken by both governmental and non-governmental groups, within and outside of Argentina. While there are an estimated 20,000-30,000 people to have disappeared, only around 8,000 have been documented. <br><br>  In addition to the identification of individual remains, sites of disappearance - 726 clandestine centers of detention (CCDs) - have also been identified. This map explores the locations of these facilities, many of which were primarily police stations.
+</p> <h3>Data Sources</h3>The main sources of data include the Single Registry of Victims of State Terror (<a href="https://datos.gob.ar/dataset/justicia-registro-unificado-victimas-terrorismo-estado--ruvte-">Registro Único de Víctimas del Terrorismo de Estado, RUVTE</a>), created by the Secretariat of Human Rights and the Monument to the Victims of State Terrorism, created by the <a href = "database.parquedelamemoria.org.ar/"> City of Buenos Aires</a>. <br><br> The lists from these sources contain the names and locations that <i> could be </i> identified, and are periodically updated as information is collected. However, these lists are therefore not complete. I accessed the data <a href = "https://diegokoz.github.io/presentes">here</a>.
+</div>
+
     <div id='legend'>
   <h4>Clandestine Centers</h4>
-  <div><span style="background-color: #e55e5e"></span>Police Station</div>
-  <div><span style="background-color: #fbb03b"></span>Other</div>
+  <div><span style="background-color: #e55e5e"></span>Police Station (Comisaría)</div>
+  <div><span style="background-color: #fbb03b"></span>Other (incl. schools, hospitals, military facilities)</div>
   </div>
     <div id='map'> Map</div>
   </div>
